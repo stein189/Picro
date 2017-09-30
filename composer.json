@@ -1,0 +1,24 @@
+{
+	"name": "szenis/picro",
+  	"description": "A PHP micro framework",
+   	"keywords": ["php", "framework", "micro"],
+   	"license": "MIT",
+   	"authors": [
+		{
+        	"name": "Stein Janssen",
+         	"email": "birdmage@gmail.com",
+         	"homepage": "https://www.codehub.nl/",
+         	"role": "Creator/Developer"
+      	}
+   	],
+    "require": {
+        "pimple/pimple": "^3.0",
+        "symfony/http-foundation": "^3.3",
+        "szenis/routing": "^1.1"
+    },
+    "autoload": {
+      	"psr-4": {
+      	   "Szenis\\Picro\\": "src/"
+      	}
+  	}
+}
