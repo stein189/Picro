@@ -37,12 +37,36 @@ Here is an example of what your index.php could look like
 
 require './vendor/autoload.php';
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 $app = new \Szenis\Picro\App();
 
-$app->get('/', function() {
-    return 'hello world';
+# It is possible to use the full path to your method
+$app->get('/', '\App\CoreBundle\Controller\DefaultController:indexAction');
+
+# Or a Closure
+$app->get('/closure', function() {
+    return new Response('hello world');
 });
 
+# The Picro framework uses the request and response object from Symfony
+# You are required to return a instance of the Response object
+
+# The name of the variables in the slug have to match the names of the variable used in the function.
+# Because the names of the arguments are the same it doesn't matter in which order they are defined
+$app->get('/{n:number}/{w:word}', function($word, $number) {
+    return new Response('hello world');
+});
+
+# When you need the Request or Response object you can simply inject it just by typehinting the class
+$app->get('/admin/{w:word}', function(Request $request, Response $response, $word) {
+    $response->setContent('hello world');
+
+    return $response;
+});
+
+# After all routes are registerd we can run our application.
 $app->run();
 ````
 
@@ -54,4 +78,4 @@ ini_set('display_errors', 1);
 ````
 
 <b>Routing</b>
-This package is using the "Simple-PHP-Router", for more information take a look at the documentation https://github.com/stein189/Simple-PHP-Router
+This package is using the "Simple-PHP-Router" (v2), for more information take a look at the documentation https://github.com/stein189/Simple-PHP-Router

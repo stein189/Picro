@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "df85138a34e42ce490b00f675b5ad320",
+    "content-hash": "f3593f070bc10946e72c7b8a7d6539db",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -219,16 +219,16 @@
         },
         {
             "name": "szenis/routing",
-            "version": "v1.1.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stein189/Simple-PHP-Router.git",
-                "reference": "2f29d953c6af8908d5b40d0d65d2f08c5d4511f3"
+                "reference": "64448875875c6309e6358cc025280359f5ca93b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stein189/Simple-PHP-Router/zipball/2f29d953c6af8908d5b40d0d65d2f08c5d4511f3",
-                "reference": "2f29d953c6af8908d5b40d0d65d2f08c5d4511f3",
+                "url": "https://api.github.com/repos/stein189/Simple-PHP-Router/zipball/64448875875c6309e6358cc025280359f5ca93b8",
+                "reference": "64448875875c6309e6358cc025280359f5ca93b8",
                 "shasum": ""
             },
             "require": {
@@ -240,7 +240,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Szenis\\": "src/"
+                    "Szenis\\Routing\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -250,7 +250,7 @@
             "authors": [
                 {
                     "name": "Stein Janssen",
-                    "email": "birdmage@gmail.com",
+                    "email": "stein@codehub.nl",
                     "homepage": "http://codehub.nl/",
                     "role": "Creator/Developer"
                 }
@@ -260,7 +260,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2016-06-20T17:30:20+00:00"
+            "time": "2017-10-01T20:59:25+00:00"
         }
     ],
     "packages-dev": [],
