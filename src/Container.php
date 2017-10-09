@@ -4,7 +4,8 @@ namespace Szenis\Picro;
 
 use Pimple\Container as BaseContainer;
 use Symfony\Component\HttpFoundation\Request;
-use Szenis\Router;
+use Symfony\Component\HttpFoundation\Response;
+use Szenis\Routing\Router;
 
 /**
  * Container
@@ -16,7 +17,7 @@ class Container extends BaseContainer
 	 */
 	public function __construct(array $values = [])
 	{
-		parent::__construct(array $values = []);
+		parent::__construct($values);
 
 		$this->registerDefaultServices();
 	}
@@ -48,11 +49,11 @@ class Container extends BaseContainer
         	return new Response('', Response::HTTP_OK, array(
 		    	'content-type' => 'text/html'
 		    ));
-        }
+        };
 
         // register the router
         $this['router'] = function ($container) {
         	return new Router();
-        }
+        };
 	}
 }
