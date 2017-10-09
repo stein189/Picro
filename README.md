@@ -43,7 +43,7 @@ use Symfony\Component\HttpFoundation\Response;
 $app = new \Szenis\Picro\App();
 
 # It is possible to use the full path to your method
-$app->get('/', '\App\CoreBundle\Controller\DefaultController:indexAction');
+$app->get('/', '\App\CoreBundle\Controller\DefaultController::indexAction');
 
 # Or a Closure
 $app->get('/closure', function() {
@@ -79,3 +79,16 @@ ini_set('display_errors', 1);
 
 <b>Routing</b>
 This package is using the "Simple-PHP-Router" (v2), for more information take a look at the documentation https://github.com/stein189/Simple-PHP-Router
+
+<b>Extra</b>
+Don't forget! When you want to use namespaces, you must let composer know!
+
+```
+"autoload": {
+    "psr-4": {
+        "App\\": "app/"
+    }
+},
+```
+
+More info about psr-4 autoload http://www.php-fig.org/psr/psr-4/
