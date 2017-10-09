@@ -77,10 +77,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ````
 
-<b>Routing</b>
+<b>Routing</b>  
 This package is using the "Simple-PHP-Router" (v2), for more information take a look at the documentation https://github.com/stein189/Simple-PHP-Router
 
-<b>Extra</b>
+<b>Extra</b>  
 Don't forget! When you want to use namespaces, you must let composer know!
 
 ```
